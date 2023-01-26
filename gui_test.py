@@ -32,25 +32,22 @@ button.pack()
 
 def check(event):
     '''チェックボックスの状態を取得する'''
-    global VAL_ONE
-    global VAL_TWO
-    global VAL_THREE
     text = ""
     count = 0
 
-    if VAL_ONE.get():
+    if val_one.get():
         text += "やること1は終わっています。\n"
         count += 1
     else:
         text += "やること1は終わっていません。やりましょう。\n"
 
-    if VAL_TWO.get():
+    if val_two.get():
         text += "やること2は終わっています。\n"
         count += 1
     else:
         text += "やること2は終わっていません。やりましょう。\n"
 
-    if VAL_THREE.get():
+    if val_three.get():
         text += "やること3は終わっています。\n"
         count += 1
     else:
@@ -64,21 +61,21 @@ def check(event):
 
 #チェックボックス「Checkbutton」
 #チェックボックスの初期値を設定
-VAL_ONE = tkinter.BooleanVar()
-VAL_TWO = tkinter.BooleanVar()
-VAL_THREE = tkinter.BooleanVar()
+val_one = tkinter.BooleanVar()
+val_two = tkinter.BooleanVar()
+val_three = tkinter.BooleanVar()
 
-VAL_ONE.set(True)
-VAL_TWO.set(False)
-VAL_THREE.set(False)
+val_one.set(True)
+val_two.set(False)
+val_three.set(False)
 
-check_box1 = tkinter.Checkbutton(text="やること1", variable=VAL_ONE)
+check_box1 = tkinter.Checkbutton(text="やること1", variable=val_one)
 check_box1.pack()
 
-check_box2 = tkinter.Checkbutton(text="やること2", variable=VAL_TWO)
+check_box2 = tkinter.Checkbutton(text="やること2", variable=val_two)
 check_box2.pack()
 
-check_box3 = tkinter.Checkbutton(text="やること3", variable=VAL_THREE)
+check_box3 = tkinter.Checkbutton(text="やること3", variable=val_three)
 check_box3.pack()
 
 button_two = tkinter.Button(text="チェックボックスの取得", width=20)
