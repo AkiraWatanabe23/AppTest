@@ -21,7 +21,7 @@ entry_box.pack()
 # entry_box.delete(0, tkinter.END)
 
 def delete_value(event):
-    '''ボタンを押した時に実行される'''
+    '''テキストボックス内の文字列を削除する'''
     entry_box.delete(0, tkinter.END)
 
 #ボタン「Button」
@@ -60,7 +60,7 @@ def check(event):
 
 
 #チェックボックス「Checkbutton」
-#チェックボックスの初期値を設定
+#チェックボックスの初期値を設定(BooleanVar)
 val_one = tkinter.BooleanVar()
 val_two = tkinter.BooleanVar()
 val_three = tkinter.BooleanVar()
