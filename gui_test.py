@@ -1,5 +1,6 @@
 '''GUIアプリケーションのテスト'''
 import tkinter
+from tkinter import messagebox
 
 #ウィンドウの初期設定（ウィンドウ作成、タイトル、サイズ指定）
 root = tkinter.Tk()
@@ -56,7 +57,7 @@ def check(event):
     if count == 3:
         text += "やることは全て終わっています。お疲れ様でした。\n"
 
-    print(text)
+    messagebox.showinfo('info', text)
 
 
 #チェックボックス「Checkbutton」
